@@ -36,7 +36,8 @@
             android:id="@+id/services_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="12dp"
             android:textAlignment="center"
             android:textAppearance="?attr/textAppearanceListItem" />
     </LinearLayout>

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -20,6 +22,7 @@ import com.example.icouna.ui.products.Product;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
+
     RecyclerView recyclerView;
 
 
@@ -53,7 +56,7 @@ public class HomeFragment extends Fragment {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
     }
-
+    private WebView wv1;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -61,8 +64,23 @@ public class HomeFragment extends Fragment {
         Service(root);
         Product(root);
         TopOfTheMonth(root);
+        Testimonials(root);
+        wv1=(WebView)root.findViewById(R.id.webView);
+        wv1.setWebViewClient(new MyBrowser());
+        wv1.getSettings().setLoadsImagesAutomatically(true);
+        wv1.getSettings().setJavaScriptEnabled(true);
+        wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        wv1.loadUrl("https://youtube.com/");
         return root;
 
+    }
+
+    private class MyBrowser extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
     }
 
     private void Service(View root) {
@@ -118,18 +136,11 @@ public class HomeFragment extends Fragment {
     private void TopOfTheMonth(View root) {
 
         ArrayList<Product> valuesList = new ArrayList<>();
-        valuesList.add(new Product(R.mipmap.ic_space, "SCIENCE-DRIVEN", "icouna’s team does not waste time debating about subjective opinions, but only facts supported by science, articles, or research papers. Our language in icouna is science; we do not guess, do not assume, do not hesitate, instead we KNOW, because we study, read, and use validated references, and accept science even if it contradicts our own subjective opinions"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SOLUTION-FOCUSED", "Our team focuses on functionality and optimization before -literally- anything else. Customization and tailoring apps and business systems are lifestyle elements in icouna. We do not care if the solution is fancy at the first phase, but we make sure it is a working, result-focused, goal oriented, and providing measurable results. After taking care of the numbers, we dress our digital products to please the eye"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SECURITY-FORTRESS", "icouna’s oxygen is data; we breathe and feed on data, and to protect our existence we protect data with all advanced means of security. We never save cost when it comes to data protection and security, and we have team members with long international experience in data security. Our clients and partners’ data is secure and safe in the always upgrading the digital fortress of icouna"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SATISFACTION", "Convenience and customer satisfaction are essential keywords in icouna, and it is not just a word we say. We follow a methodology to ensure it, through transparency, customer feedback, decency, and listening; our team is trained on active listening concept to ensure positive communication. Yes, we breathe on data and talk the language of numbers, but we are not robots, we know how to build a professional and human-centered relationship with our partners"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SCIENCE-DRIVEN", "icouna’s team does not waste time debating about subjective opinions, but only facts supported by science, articles, or research papers. Our language in icouna is science; we do not guess, do not assume, do not hesitate, instead we KNOW, because we study, read, and use validated references, and accept science even if it contradicts our own subjective opinions"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SOLUTION-FOCUSED", "Our team focuses on functionality and optimization before -literally- anything else. Customization and tailoring apps and business systems are lifestyle elements in icouna. We do not care if the solution is fancy at the first phase, but we make sure it is a working, result-focused, goal oriented, and providing measurable results. After taking care of the numbers, we dress our digital products to please the eye"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SECURITY-FORTRESS", "icouna’s oxygen is data; we breathe and feed on data, and to protect our existence we protect data with all advanced means of security. We never save cost when it comes to data protection and security, and we have team members with long international experience in data security. Our clients and partners’ data is secure and safe in the always upgrading the digital fortress of icouna"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SATISFACTION", "Convenience and customer satisfaction are essential keywords in icouna, and it is not just a word we say. We follow a methodology to ensure it, through transparency, customer feedback, decency, and listening; our team is trained on active listening concept to ensure positive communication. Yes, we breathe on data and talk the language of numbers, but we are not robots, we know how to build a professional and human-centered relationship with our partners"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SCIENCE-DRIVEN", "icouna’s team does not waste time debating about subjective opinions, but only facts supported by science, articles, or research papers. Our language in icouna is science; we do not guess, do not assume, do not hesitate, instead we KNOW, because we study, read, and use validated references, and accept science even if it contradicts our own subjective opinions"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SOLUTION-FOCUSED", "Our team focuses on functionality and optimization before -literally- anything else. Customization and tailoring apps and business systems are lifestyle elements in icouna. We do not care if the solution is fancy at the first phase, but we make sure it is a working, result-focused, goal oriented, and providing measurable results. After taking care of the numbers, we dress our digital products to please the eye"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SECURITY-FORTRESS", "icouna’s oxygen is data; we breathe and feed on data, and to protect our existence we protect data with all advanced means of security. We never save cost when it comes to data protection and security, and we have team members with long international experience in data security. Our clients and partners’ data is secure and safe in the always upgrading the digital fortress of icouna"));
-        valuesList.add(new Product(R.mipmap.ic_space, "SATISFACTION", "Convenience and customer satisfaction are essential keywords in icouna, and it is not just a word we say. We follow a methodology to ensure it, through transparency, customer feedback, decency, and listening; our team is trained on active listening concept to ensure positive communication. Yes, we breathe on data and talk the language of numbers, but we are not robots, we know how to build a professional and human-centered relationship with our partners"));
+        valuesList.add(new Product(R.mipmap.ic_space, "AbdelHalim Mahmoud", "Android Developer"));
+        valuesList.add(new Product(R.mipmap.ic_space, "AbdelHalim Mahmoud", "Android Developer"));
+        valuesList.add(new Product(R.mipmap.ic_space, "AbdelHalim Mahmoud", "Android Developer"));
+        valuesList.add(new Product(R.mipmap.ic_space, "AbdelHalim Mahmoud", "Android Developer"));
+        valuesList.add(new Product(R.mipmap.ic_space, "AbdelHalim Mahmoud", "Android Developer"));
 
 
         Context context = root.getContext();
@@ -143,6 +154,30 @@ public class HomeFragment extends Fragment {
         ValuesRecyclerViewAdapter valuesRecyclerViewAdapter = new ValuesRecyclerViewAdapter(R.layout.about_values_item, valuesList);
 
         recyclerView.setAdapter(valuesRecyclerViewAdapter);
+
+    }
+
+    private void Testimonials(View root) {
+
+        ArrayList<Testimonials> valuesList = new ArrayList<>();
+        valuesList.add(new Testimonials(R.mipmap.ic_space, "AbdelHalim Mahmoud Mohamed", "Android Developer", "Icouna", "Very good company lol, very professional staff, good product and services, very good quality"));
+        valuesList.add(new Testimonials(R.mipmap.ic_space, "AbdelHalim Mahmoud Mohamed", "Android Developer", "Icouna", "Very good company lol"));
+        valuesList.add(new Testimonials(R.mipmap.ic_space, "AbdelHalim Mahmoud Mohamed", "Android Developer", "Icouna", "Very good company lol"));
+        valuesList.add(new Testimonials(R.mipmap.ic_space, "AbdelHalim Mahmoud Mohamed", "Android Developer", "Icouna", "Very good company lol"));
+        valuesList.add(new Testimonials(R.mipmap.ic_space, "AbdelHalim Mahmoud Mohamed", "Android Developer", "Icouna", "Very good company lol"));
+
+
+        Context context = root.getContext();
+        recyclerView = (RecyclerView) root.findViewById(R.id.testimonials);
+        if (mColumnCount <= 1) {
+            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+        } else {
+            recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
+        }
+
+        TestimonialsRecyclerViewAdapter testimonialsRecyclerViewAdapter = new TestimonialsRecyclerViewAdapter(R.layout.testimonials_item, valuesList);
+
+        recyclerView.setAdapter(testimonialsRecyclerViewAdapter);
 
     }
 }

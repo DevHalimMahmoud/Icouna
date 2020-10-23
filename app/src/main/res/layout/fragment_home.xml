@@ -33,6 +33,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Services" />
+
         <TextView
             android:id="@+id/product"
             android:layout_width="match_parent"
@@ -46,7 +47,8 @@
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_services"/>
+            app:layout_constraintTop_toBottomOf="@id/home_services" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/home_product"
             android:layout_width="match_parent"
@@ -54,6 +56,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/product" />
+
         <TextView
             android:id="@+id/top_achievers"
             android:layout_width="match_parent"
@@ -67,7 +70,8 @@
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_product"/>
+            app:layout_constraintTop_toBottomOf="@id/home_product" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/home_top_achievers"
             android:layout_width="match_parent"
@@ -76,5 +80,35 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/top_achievers" />
 
+        <TextView
+            android:id="@+id/testimonials_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Testimonials"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_top_achievers" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/testimonials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/testimonials_text" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/testimonials"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
