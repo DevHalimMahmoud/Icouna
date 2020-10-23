@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment {
         wv1.getSettings().setLoadsImagesAutomatically(true);
         wv1.getSettings().setJavaScriptEnabled(true);
         wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        wv1.loadUrl("https://youtube.com/");
+        wv1.loadUrl("https://www.youtube.com/embed/8c399HPb01s");
         return root;
 
     }
