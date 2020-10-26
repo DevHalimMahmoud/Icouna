@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.joinUs.CareersDetails"></activity>
+        <activity android:name=".ui.joinUs.Login"></activity>
+        <activity android:name=".ui.joinUs.InternshipForm" />
+        <activity android:name=".ui.joinUs.CareerForm" />
+        <activity android:name=".ui.joinUs.CareersDetails" />
         <activity android:name=".ui.joinUs.InternshipDetails" />
         <activity android:name=".ui.joinUs.Careers" />
         <activity android:name=".ui.joinUs.Internships" />

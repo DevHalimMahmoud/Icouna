@@ -113,5 +113,91 @@ Unit-test code for robustness, including edge cases, usability, and general reli
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/skill" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Category:"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/skill_text" />
+
+        <TextView
+
+            android:id="@+id/category_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Developer"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/category" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Category:"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_text" />
+
+        <TextView
+
+            android:id="@+id/type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Full Time"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/type" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Category:"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/type_text" />
+
+        <TextView
+
+            android:id="@+id/location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+
+            android:text="Main Office"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/location" />
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/rounded_corners"
+            android:text="Apply"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_text" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

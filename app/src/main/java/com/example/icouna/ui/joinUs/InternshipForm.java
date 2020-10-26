@@ -10,24 +10,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.icouna.R;
 
-public class CareersDetails extends AppCompatActivity {
+public class InternshipForm extends AppCompatActivity {
     Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_careers_details);
-        context=getBaseContext();
-        Button apply =findViewById(R.id.apply);
+        setContentView(R.layout.activity_internship_form);
+        context = getBaseContext();
+        Button apply = findViewById(R.id.apply);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Intent intent;
-                intent = new Intent(context, InternshipForm.class);
+                intent = new Intent(context, Login.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
     }
-
 }

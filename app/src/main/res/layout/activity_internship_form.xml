@@ -16,21 +16,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-thin"
-            android:text="Keep In Touch"
+            android:text="Data Form"
             android:textAlignment="center"
 
             android:textColor="@android:color/black"
             android:textSize="25sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingBottom="10dp"
-            android:text="Contact Us"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="35sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -47,19 +38,6 @@
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/subject"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="22dp"
-                android:hint="Subject"
-                android:inputType="textEmailSubject"
-                android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -81,6 +59,35 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phoneInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,92 +98,53 @@
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tell_us"
+                android:id="@+id/address_input"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="22dp"
-                android:hint="Tell Us More"
-                android:inputType="textMultiLine"
-                android:lines="8"
-                android:singleLine="true"
-                android:textAlignment="viewStart" />
 
+                android:hint="Address"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <Button
-            android:id="@+id/send"
+            android:id="@+id/cv"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="16dp"
+            android:layout_gravity="left"
+            android:layout_margin="16dp"
             android:background="@drawable/rounded_corners"
             android:clickable="true"
             android:elevation="15dp"
             android:focusable="true"
-            android:text="Send"
+            android:text="Upload CV"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="@drawable/rounded_corners"
+            android:clickable="true"
+            android:elevation="15dp"
+            android:focusable="true"
+            android:text="Apply"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             app:layout_constraintCircleRadius="50dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="sans-serif-thin"
-            android:text="HEAD OFFICE"
-            android:textAlignment="center"
 
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
-
-        <ImageView
-            android:id="@+id/mapImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginHorizontal="16dp"
-
-
-            android:background="@mipmap/map"
-            android:bottomLeftRadius="50dp"
-            android:bottomRightRadius="50dp"
-            android:scaleType="centerCrop"
-            android:topLeftRadius="50dp"
-            android:topRightRadius="50dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="5dp"
-            android:text="Villa No#. 100, Ahmed Shawqi Axis, El-Banafseg 4, 1st settlement, New Cairo, Egypt."
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Landline: +202 23076483"
-            android:textAlignment="center"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/mail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Mail: info@icouna.com"
-            android:textAlignment="center"
-            android:textStyle="bold" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
