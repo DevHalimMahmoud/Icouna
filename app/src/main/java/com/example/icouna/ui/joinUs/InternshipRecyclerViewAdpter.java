@@ -15,14 +15,14 @@ import com.example.icouna.R;
 
 import java.util.ArrayList;
 
-public class CareersRecyclerViewAdapter extends RecyclerView.Adapter<CareersRecyclerViewAdapter.ViewHolder> {
+public class InternshipRecyclerViewAdpter extends RecyclerView.Adapter<InternshipRecyclerViewAdpter.ViewHolder> {
 
     //All methods in this adapter are required for a bare minimum recyclerview adapter
     private int listItemLayout;
     private ArrayList<JoinUsItem> itemList;
 
     // Constructor of the class
-    public CareersRecyclerViewAdapter(int layoutId, ArrayList<JoinUsItem> itemList) {
+    public InternshipRecyclerViewAdpter(int layoutId, ArrayList<JoinUsItem> itemList) {
         listItemLayout = layoutId;
         this.itemList = itemList;
     }
@@ -37,15 +37,15 @@ public class CareersRecyclerViewAdapter extends RecyclerView.Adapter<CareersRecy
 
     // specify the row layout file and click for each row
     @Override
-    public CareersRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public InternshipRecyclerViewAdpter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(listItemLayout, parent, false);
 
-        return new CareersRecyclerViewAdapter.ViewHolder(view);
+        return new InternshipRecyclerViewAdpter.ViewHolder(view);
     }
 
     // load data in each row element
     @Override
-    public void onBindViewHolder(final CareersRecyclerViewAdapter.ViewHolder holder, final int listPosition) {
+    public void onBindViewHolder(final InternshipRecyclerViewAdpter.ViewHolder holder, final int listPosition) {
 
         TextView title = holder.title;
         TextView location = holder.location;
@@ -71,7 +71,7 @@ public class CareersRecyclerViewAdapter extends RecyclerView.Adapter<CareersRecy
                 @Override
                 public void onClick(View v) {
                     final Intent intent;
-                    intent = new Intent(context, CareersDetails.class);
+                    intent = new Intent(context, InternshipDetails.class);
                     context.startActivity(intent);
                 }
             });
@@ -80,8 +80,7 @@ public class CareersRecyclerViewAdapter extends RecyclerView.Adapter<CareersRecy
         @Override
         public void onClick(View view) {
             Log.d("onclick", "onClick " + getLayoutPosition() + " " + title.getText());
-           /* MainActivity mainActivity = new MainActivity();
-            mainActivity.switchContent(R.id.nav_home, new HomeFragment(), view);*/
+
 
         }
     }

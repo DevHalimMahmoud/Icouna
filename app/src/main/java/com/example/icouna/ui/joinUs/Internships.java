@@ -31,9 +31,9 @@ public class Internships extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false));
 
 
-        CareersRecyclerViewAdapter careersRecyclerViewAdapter = new CareersRecyclerViewAdapter(R.layout.join_us_item, joinUsItemArrayList);
+        InternshipRecyclerViewAdpter internshipRecyclerViewAdpter = new InternshipRecyclerViewAdpter(R.layout.join_us_item, joinUsItemArrayList);
 
-        recyclerView.setAdapter(careersRecyclerViewAdapter);
+        recyclerView.setAdapter(internshipRecyclerViewAdpter);
     }
 
 
